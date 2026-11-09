@@ -1,0 +1,54 @@
+# Map 'Market Street' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Rug;0.9068;0.9435
+Iron Pot;0.7211;0.7434
+Spiked Flail;0.6787;0.5423
+Shovel;0.2288;0.7777
+Tree;0.9494;0.3586
+Lantern;0.8103;0.6409
+Shield;0.7817;0.8334
+Iron Axe;0.0572;0.8149
+Skylight;0.6582;0.0428
+Armor;0.6697;0.4316
+Fork & Knife;0.848;0.0742
+Leaf Pile;0.803;0.3421
+Cat;0.2183;0.335
+Giant Elk;0.1945;0.2411
+Spear;0.0621;0.5232
+Flower Basket;0.2623;0.4453
+Fur Mantle;0.9485;0.8528
+Quiver;0.4086;0.4901
+Ladle;0.9435;0.6715
+Sword;0.3655;0.6455
+Flag Garland;0.6344;0.1856
+Crossbow;0.273;0.5686
+Fish;0.1685;0.6609
+Beast Trap;0.2706;0.7184
+Broom;0.9203;0.2952
+Shoe;0.1372;0.7449
+Horn;0.404;0.7269
+Shoulder Bag;0.5569;0.5042
+Apple;0.2379;0.6226
+Bird's Nest;0.5773;0.2691
+Gloves;0.0683;0.5694
+Balloons;0.4055;0.1442
+Arrow Sign;0.0495;0.253
+Fence;0.7573;0.4021
+Patch;0.641;0.1083
+Pliers;0.3956;0.4288
+Glass Bottle;0.1306;0.5891
+Potatoes;0.4415;0.5572
+Target;0.4375;0.3969
+Brush;0.7385;0.5966
+Heart;0.4759;0.2017
+Turkey;0.4727;0.4418
+H;0.3686;0.0865
+Eggs;0.5397;0.4313
+Corn;0.4468;0.5231
+Chimney;0.2753;0.0233
+Headwear;0.825;0.2245
+Pumpkin;0.7686;0.2779
+Pigeon;0.7349;0.0446
+Mushroom;0.4259;0.2362

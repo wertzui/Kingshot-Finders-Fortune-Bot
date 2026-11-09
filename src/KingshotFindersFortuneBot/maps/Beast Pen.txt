@@ -1,0 +1,54 @@
+# Map 'Beast Pen' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Wooden Cart;0.3532;0.7929
+Deer;0.6084;0.6911
+Spear;0.9161;0.8037
+Barrel;0.1071;0.68
+Headwear;0.7491;0.9117
+Rabbit;0.108;0.8048
+Broom;0.4156;0.5766
+Tree Stump;0.2722;0.9671
+Bucket;0.8006;0.7138
+Ladder;0.1585;0.5941
+Pouch;0.4759;0.9541
+Shovel;0.1698;0.5138
+Ostrich Egg;0.5683;0.8293
+Apron;0.9176;0.5502
+Carrot;0.7194;0.7973
+Squirrel;0.34;0.323
+Saddle;0.8245;0.5122
+Bird;0.465;0.1626
+Rope;0.2887;0.3789
+Clay Pot;0.0571;0.8812
+Basket;0.2126;0.6849
+Parrot;0.9183;0.7034
+Wind Vane;0.5193;0.3814
+Yak;0.8472;0.4234
+Boots;0.9167;0.644
+Lock;0.4841;0.5482
+Cat;0.2892;0.5627
+Rooster;0.6076;0.3323
+Bell;0.4063;0.4214
+Duck;0.8031;0.6141
+Lantern;0.6877;0.5111
+Windmill;0.6157;0.5197
+Butterfly;0.8773;0.9072
+Collar;0.412;0.6301
+Chameleon;0.2609;0.6246
+Bowl;0.7423;0.6165
+Horseshoe;0.6116;0.9537
+Glove;0.5834;0.4173
+Sign Post;0.9518;0.4359
+Heart;0.6673;0.1876
+Brush;0.7637;0.5552
+Water Stain;0.8808;0.6115
+Crown;0.5265;0.4322
+Beast Trap;0.8921;0.4706
+Fish Bone;0.8439;0.7734
+Ladybird;0.4033;0.9016
+Spoon;0.8269;0.5666
+Patch;0.7023;0.4678
+Key;0.7588;0.5227
+Footprints;0.5173;0.6071

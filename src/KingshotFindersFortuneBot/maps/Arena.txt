@@ -1,0 +1,55 @@
+# Map 'Arena' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Crossbow;0.7589;0.8038
+Gong;0.3826;0.5258
+Wheel;0.0686;0.8013
+Broom;0.0905;0.587
+Quiver;0.8905;0.8243
+Hay Bale;0.7778;0.5706
+Hook;0.5608;0.283
+Bucket;0.7409;0.6676
+Guitar;0.3964;0.8338
+Chest;0.2348;0.5826
+Training Dummy;0.9453;0.5467
+Hammer;0.7923;0.8872
+Leather Bag;0.1553;0.6995
+Hot Air Balloon;0.3768;0.0963
+Spyglass;0.5813;0.9404
+Helmet;0.1624;0.6346
+Hourglass;0.5231;0.8593
+Torch;0.7514;0.2461
+Trophy;0.0563;0.4362
+Shovel;0.0785;0.9253
+Crack;0.5208;0.7309
+Brazier;0.5077;0.54
+Bone;0.2607;0.7308
+Spiked Flail;0.8741;0.3473
+Target;0.1758;0.4468
+Mushroom;0.2044;0.9086
+Wooden Figure;0.0399;0.3284
+Whip;0.3083;0.4289
+Dumbbell;0.6599;0.7145
+Sheep Head;0.3328;0.3185
+Horn;0.6557;0.3314
+Map;0.8072;0.3175
+Cushion;0.9496;0.3458
+Triangle;0.085;0.3475
+Book;0.1569;0.3933
+Bird's Nest;0.5102;0.257
+Basket;0.4472;0.352
+Boots;0.6794;0.5602
+Ear of Wheat;0.4916;0.4024
+Medal;0.2503;0.4843
+Drain;0.5599;0.667
+Pouch;0.8979;0.5767
+Mouse;0.5897;0.5201
+F;0.1838;0.3214
+Gemstone;0.6313;0.1668
+Claw Mark;0.7333;0.5022
+Sun;0.8995;0.5072
+Bird;0.6779;0.2266
+Bell;0.1479;0.302
+Lock;0.6059;0.4793
+Key;0.9363;0.4104

@@ -1,0 +1,59 @@
+# Map 'Command Center' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Broom;0.0808;0.4868
+Castle;0.2379;0.6425
+Armor;0.5184;0.4579
+Drum;0.8758;0.8687
+Footprints;0.1087;0.9337
+Quill;0.7809;0.61
+Cannon;0.3009;0.7374
+Spider;0.543;0.2607
+Z;0.6395;0.2035
+Globe;0.7645;0.5192
+Sailboat;0.506;0.632
+Statue;0.9116;0.6071
+Dog Food;0.3395;0.9076
+Notebook;0.4618;0.7085
+Animal Hide;0.4032;0.5731
+Sun;0.2765;0.4025
+Picture Frame;0.7342;0.2605
+Air Drop;0.8642;0.3289
+Lantern;0.3631;0.5067
+Trophy;0.1945;0.5652
+Backpack;0.9257;0.4478
+M;0.2871;0.842
+Drawer;0.955;0.5057
+Key;0.7289;0.7801
+Small Bridge;0.2207;0.7123
+Badge;0.1995;0.369
+Scroll;0.1088;0.6351
+Envelope;0.5816;0.7013
+Map;0.3998;0.6171
+Wall Light;0.0687;0.3085
+Bucket;0.1831;0.5087
+Dog;0.6287;0.5398
+Handgun;0.2722;0.5182
+Glasses;0.5935;0.7349
+Four-Leaf Clover;0.5096;0.7634
+Hourglass;0.1332;0.7269
+Headwear;0.3983;0.3346
+Triangle;0.3623;0.3829
+E;0.8094;0.7589
+Shield;0.4668;0.3683
+Pinecone;0.4572;0.8947
+Butterfly;0.2329;0.4498
+Magnifier;0.7105;0.6624
+Spyglass;0.6917;0.6221
+Glove;0.4815;0.5266
+Toy Soldier;0.5627;0.5891
+Tea Set;0.6884;0.7141
+Stamp;0.349;0.662
+Compass;0.623;0.663
+Catapult;0.8831;0.5462
+Pigeon;0.2485;0.314
+Flower;0.8839;0.4977
+Paper Ball;0.398;0.7404
+Blackboard Eraser;0.3546;0.4297
+Gold Coins;0.1609;0.682

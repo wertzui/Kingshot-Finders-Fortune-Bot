@@ -1,0 +1,60 @@
+# Map 'Monument' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Boots;0.5276;0.8908
+Basket;0.3574;0.7448
+Hot Air Balloon;0.2844;0.1058
+Briefcase;0.3294;0.8627
+Lift;0.2004;0.3514
+Scarf;0.115;0.668
+Cart;0.3599;0.6312
+Pouch;0.7156;0.7043
+Headwear;0.7514;0.7854
+Cave;0.8486;0.3414
+Dustpan;0.7979;0.9376
+Shield;0.3778;0.4234
+Streetlight;0.0369;0.5008
+Watchtower;0.8364;0.1995
+Hammer;0.8013;0.8628
+Watering Can;0.8103;0.5937
+Blanket;0.1055;0.8213
+Water Bucket;0.6053;0.648
+Flag Garland;0.7564;0.4664
+Shovel;0.2755;0.6995
+Wooden Spoon;0.6312;0.8053
+Tent;0.0612;0.3139
+Glove;0.3007;0.9521
+Kite;0.8734;0.0693
+Lightning;0.7456;0.3074
+Wreath;0.1773;0.7603
+Oil Lamp;0.053;0.6346
+Flower Bundle;0.9118;0.6504
+Iron Axe;0.8131;0.6535
+Pruning Shears;0.4733;0.8177
+Wood Pile;0.1724;0.6175
+Apple;0.7081;0.8991
+Compass;0.5084;0.6031
+Balloons;0.9418;0.2695
+Paper Plane;0.1577;0.2375
+Broom;0.8611;0.5248
+Barrel;0.9592;0.5652
+Squirrel;0.6395;0.5895
+Ladder;0.2486;0.5147
+Bone;0.5479;0.7393
+w;0.4365;0.2496
+Bell;0.7907;0.4124
+Snail;0.4889;0.7149
+Paw Print;0.4688;0.9616
+Claw Mark;0.5019;0.5103
+Rope;0.1021;0.6001
+Hourglass;0.4342;0.5577
+Sign Post;0.664;0.3483
+Acorn;0.0366;0.7549
+Mushroom;0.9616;0.7339
+Gemstone;0.4801;0.3059
+Feather;0.5821;0.5661
+Bird's Nest;0.2281;0.4371
+v;0.907;0.4708
+Owl;0.1308;0.4297
+Pigeon;0.7015;0.1946

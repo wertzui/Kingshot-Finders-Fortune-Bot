@@ -1,0 +1,59 @@
+# Map 'Enlistment Office' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Kite;0.8624;0.1738
+Map;0.1676;0.9317
+Flag Garland;0.4441;0.245
+Armor;0.5364;0.7314
+Ladder;0.5618;0.4882
+Sword;0.4157;0.7978
+Broom;0.9526;0.6885
+Iron Axe;0.4111;0.6342
+Boots;0.6108;0.8439
+Rope;0.718;0.8123
+Banner;0.2066;0.4547
+Shield;0.3065;0.6016
+Watering Can;0.8414;0.7524
+Squirrel;0.3163;0.6944
+Spyglass;0.4882;0.8887
+Pouch;0.8103;0.9426
+Spiked Flail;0.5952;0.662
+Glove;0.9202;0.8603
+Mushroom;0.56;0.9539
+Vines;0.9364;0.5562
+Crate;0.0848;0.6829
+Sign Post;0.7059;0.599
+Plane;0.125;0.8626
+Pigeon;0.0948;0.7823
+Withered Branch;0.5911;0.6215
+Hot Air Balloon;0.1479;0.1194
+Bird Flock;0.6018;0.1668
+Goggles;0.6876;0.908
+Parcel;0.4316;0.4528
+Slingshot;0.3138;0.9656
+Three-Leaf Clover;0.7736;0.8777
+Archery Target;0.7377;0.7155
+Wood Pile;0.0498;0.7362
+Spider Web;0.2134;0.3406
+Shovel;0.2005;0.6565
+Poster;0.6402;0.5311
+Balloons;0.8302;0.3823
+Bird's Nest;0.6991;0.359
+Crack;0.5903;0.2941
+Horn;0.7425;0.6436
+Puddle;0.2379;0.8413
+Bedroll;0.1029;0.6274
+Bowknot;0.8095;0.483
+Key;0.8416;0.8032
+Boomerang;0.489;0.6009
+w;0.4499;0.1872
+Butterfly;0.9297;0.7918
+Cogwheel;0.6696;0.7438
+Chimney;0.0644;0.4622
+Pumpkin;0.8666;0.6181
+Acorn;0.207;0.7358
+Crescent Moon;0.3106;0.5412
+Smile;0.3;0.3276
+Compass;0.8391;0.6646
+Arrow Sign;0.1817;0.5777

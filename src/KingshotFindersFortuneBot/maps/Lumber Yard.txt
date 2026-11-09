@@ -1,0 +1,54 @@
+# Map 'Lumber Yard' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Horse;0.3829;1.0072
+Hot Air Balloon;0.8863;0.0398
+Watchtower;0.4342;0.2378
+Tent;0.928;0.5526
+Windmill;0.7041;0.2545
+Ladder;0.9177;0.4483
+Sign Post;0.5804;0.4519
+Mailbox;0.595;0.5545
+Barrel;0.2232;0.9416
+Bear;0.2739;0.7254
+Pouch;0.9354;0.7624
+Bedroll;0.8759;0.8073
+Whip;0.9658;0.9012
+Headwear;0.7834;0.7554
+Toolbox;0.1562;0.7694
+Saw;0.5061;0.66
+Deer;0.6458;0.3935
+Axe;0.0587;0.9087
+Stool;0.2263;0.8123
+Musket;0.466;0.7809
+Lantern;0.421;0.6295
+Canteen;0.8014;0.9216
+Pole Streamer;0.2051;0.2919
+Paw Prints;0.9531;0.6574
+Slingshot;0.1161;0.8143
+Boomerang;0.1177;0.655
+Boots;0.592;0.7694
+Map;0.3573;0.5876
+Bird;0.3336;0.0739
+Flower;0.7237;0.4883
+Squirrel;0.7309;0.6106
+Gloves;0.5634;0.8143
+Rope;0.7171;0.6935
+F;0.0645;0.3439
+Hand Saw;0.6192;0.6136
+Hammer;0.331;0.8363
+Bird's Nest;0.8397;0.2775
+Knife;0.3533;0.7834
+Plane;0.3958;0.4814
+Arrow Sign;0.7392;0.3974
+Bell;0.8374;0.3713
+Shovel;0.722;0.5412
+Pinecone;0.8667;0.675
+Triangle;0.7564;0.4358
+Hook;0.0662;0.705
+Heart;0.4586;0.5123
+Bottle;0.5028;0.8378
+Scarf;0.7997;0.4513
+Bone;0.557;0.7249
+Beast Trap;0.4801;0.4314

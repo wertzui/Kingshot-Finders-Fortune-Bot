@@ -1,0 +1,54 @@
+# Map 'Storeroom' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Broom;0.6263;0.8445
+Handcart;0.4235;0.58
+Boots;0.462;0.9247
+Wooden Pallet;0.4855;0.6636
+Spider Web;0.1914;0.0445
+Ladder;0.6811;0.5117
+Shovel;0.3113;0.7459
+Gift Box;0.8888;0.8822
+Rag;0.6878;0.2401
+Axe;0.1913;0.5726
+Water Bucket;0.2053;0.6569
+Map;0.8788;0.6745
+Scissors;0.7155;0.9337
+Triangle;0.238;0.7769
+Scarecrow;0.1104;0.4613
+Wood Pile;0.1127;0.6765
+Scarf;0.7933;0.4443
+Lamp;0.7808;0.3709
+Chest;0.5681;0.414
+Sword;0.9068;0.7339
+Briefcase;0.5682;0.3329
+Hammer;0.309;0.8148
+Glove;0.2421;0.8717
+Pliers;0.0875;0.8502
+Footprints;0.2527;0.9386
+Pinecone;0.4283;0.7993
+Notebook;0.7703;0.7115
+Iron Pot;0.7865;0.6016
+Rope;0.5748;0.5972
+Calendar;0.0548;0.5338
+Bird;0.1913;0.352
+Trophy;0.5928;0.4798
+Mouse;0.0393;0.8027
+Hourglass;0.533;0.4976
+Gold Coins;0.1471;0.8357
+Pocket Watch;0.928;0.3819
+Flower Pot;0.897;0.4657
+6;0.3277;0.4742
+Goggles;0.8717;0.6241
+Wooden Sign;0.2624;0.5198
+Arrow Sign;0.4145;0.2072
+Glass Jar;0.9609;0.5492
+Branch;0.263;0.3784
+Tower;0.2388;0.4139
+Bell;0.2756;0.3061
+Magnifier;0.0446;0.6098
+Key;0.7231;0.5724
+Apple;0.8464;0.5493
+Canteen;0.9568;0.4768
+Spool;0.6638;0.3329

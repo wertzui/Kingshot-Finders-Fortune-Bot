@@ -1,0 +1,54 @@
+# Map 'Throne Room' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Curtain;0.7975;0.2991
+Lamp;0.5811;0.0633
+Ladder;0.0499;0.5256
+Backpack;0.5585;0.7684
+Statue;0.3558;0.4802
+Clothing;0.3876;0.6321
+Binoculars;0.4863;0.8986
+Mug;0.8324;0.9155
+Hanging Banner;0.3383;0.2165
+Globe;0.9299;0.5638
+Plant;0.8136;0.5072
+Hat;0.1839;0.2769
+Clock;0.0979;0.317
+Belt;0.0915;0.1582
+Hourglass;0.8505;0.684
+Photo Frame;0.3536;0.378
+Dagger;0.7057;0.8164
+Cane;0.2526;0.5422
+Water Bag;0.7746;0.5967
+Magnifier;0.9016;0.73
+Shoe;0.6902;0.6755
+Horn;0.7572;0.7384
+Pouch;0.3205;0.7315
+Shield;0.5003;0.5097
+Mask;0.0791;0.7
+Gold Coins;0.2249;0.7754
+Umbrella;0.5659;0.4972
+Sword;0.4686;0.4262
+Shell;0.6816;0.1501
+Bandage Roll;0.1838;0.7035
+Key;0.6214;0.8632
+Ship;0.3996;0.5736
+Rose;0.6867;0.6201
+Branch;0.5764;0.5711
+Handcuffs;0.1022;0.6525
+Paper Plane;0.4277;0.716
+Weighing Scale;0.1576;0.368
+Compass;0.1881;0.6416
+Stamp;0.0883;0.7397
+Diamond;0.9493;0.7016
+Bottle;0.1604;0.5419
+Sun;0.3385;0.2804
+Goggles;0.255;0.5873
+Scroll;0.8594;0.6165
+Pigeon;0.7471;0.4313
+Judge's Gavel;0.6311;0.4573
+Trophy;0.143;0.4971
+Crown;0.6591;0.5148
+Ink Bottle;0.7029;0.4534
+Claw Mark;0.8955;0.4858

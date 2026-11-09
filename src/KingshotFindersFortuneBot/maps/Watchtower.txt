@@ -1,0 +1,54 @@
+# Map 'Watchtower' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Skis;0.9252;0.7878
+Punching Bag;0.0635;0.6161
+Spiked Flail;0.0978;0.9591
+Dagger;0.7677;0.8272
+Helmet;0.7158;0.9496
+Horn;0.9102;0.9585
+Hot Air Balloon;0.6427;0.1119
+Spear;0.1642;0.6417
+Wooden Horse;0.3698;0.9365
+Pouch;0.1405;0.3001
+Medical Satchel;0.1044;0.8265
+Bow;0.6003;0.7479
+Barrel;0.0529;0.7484
+Armored Boots;0.4488;0.8432
+Paint Blob;0.1742;0.5225
+Axe;0.2141;0.8268
+Hook;0.2952;0.1991
+Whip;0.2362;0.5531
+Canteen;0.0503;0.8981
+Crate;0.3812;0.6714
+Watchtower;0.9541;0.4058
+Beehive;0.3313;0.3216
+Bucket;0.6481;0.7076
+Glove;0.9013;0.9052
+Ladder;0.5338;0.6425
+Window;0.6893;0.6267
+Hammer;0.4359;0.7169
+Pulley;0.8515;0.5028
+Shield;0.9638;0.6551
+Bell;0.3303;0.5957
+Trophy;0.8094;0.7024
+Stool;0.1708;0.7619
+Heart;0.0643;0.2662
+Towel;0.5177;0.7011
+Headwear;0.9061;0.6177
+Mug;0.439;0.751
+Footprints;0.6007;0.7864
+Clock;0.7499;0.4714
+Apple;0.2666;0.6894
+Hourglass;0.3541;0.7299
+Streetlight;0.6771;0.5606
+Envelope;0.7565;0.7459
+Arrow Sign;0.6019;0.6291
+Badge;0.5013;0.5425
+Bird;0.5758;0.4666
+Brush;0.7415;0.7224
+Paper Plane;0.8928;0.3485
+6;0.5348;0.5652
+Key;0.6862;0.7344
+Horseshoe;0.9396;0.7108

@@ -1,0 +1,54 @@
+# Map 'Windmill' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Crate;0.57;0.9736
+Hot Air Balloon;0.0818;0.1361
+Crown;0.7784;0.9157
+Goose;0.604;0.7174
+Axe;0.8854;0.7734
+Crack;0.65;0.3605
+Ladder;0.7188;0.5302
+Rope;0.0753;0.8317
+Cat;0.4996;0.7764
+Scarecrow;0.1299;0.7015
+Book;0.2616;0.9841
+Hammer;0.3277;0.8721
+Dog;0.74;0.7473
+Spider Web;0.6574;0.242
+Cart;0.5406;0.6362
+Arrow;0.5586;0.3919
+Broom;0.925;0.667
+Mushroom;0.442;0.711
+Mouse;0.4022;0.8158
+Trophy;0.7856;0.668
+Scarf;0.2052;0.8053
+Toy Airplane;0.0687;0.6343
+Shovel;0.4255;0.6349
+Chimney;0.0438;0.5702
+Lock;0.3515;0.7863
+Sword;0.1518;0.9322
+Horse;0.21;0.6724
+Kite;0.202;0.5238
+Fork;0.8666;0.578
+Wooden Sign;0.9551;0.6196
+Sickle;0.5963;0.8153
+Rhinoceros Beetle;0.9118;0.9491
+Eggs;0.6924;0.7853
+Triangle;0.3686;0.9431
+Target;0.8421;0.4499
+Firewood;0.6638;0.6235
+Beehive;0.4472;0.5073
+Banner;0.928;0.4517
+Hay Bale;0.3377;0.6474
+Blackboard;0.5865;0.5522
+Shield;0.8218;0.5841
+Scissors;0.5731;0.8871
+Owl;0.7507;0.0999
+Letter;0.2739;0.9282
+Chicken;0.8464;0.6266
+Key;0.4334;0.9216
+Watchtower;0.2168;0.6086
+Bird's Nest;0.686;0.4608
+Paw Print;0.6418;0.9122
+Discus;0.699;0.1901

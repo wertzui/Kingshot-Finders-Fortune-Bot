@@ -1,0 +1,59 @@
+# Map 'Café Terrace' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Clock;0.9605;0.1435
+Backpack;0.2881;0.682
+Cake;0.3598;0.8691
+Diary;0.0236;0.8047
+Violin;0.975;0.3889
+Scarf;0.4666;0.6564
+Coffee Cup;0.5922;0.8798
+Bread Slice;0.2593;0.7781
+Piano;0.4568;0.4493
+Glasses;0.0787;0.8947
+Envelope;0.7138;0.7384
+Fork;0.7242;0.9192
+Fish Bone;0.7896;0.9676
+Pocket Watch;0.539;0.7575
+Picture Frame;0.0718;0.4211
+Gift Box;0.1676;0.5741
+Car;0.7167;0.6769
+Chimney;0.2399;0.0984
+Yarn Ball;0.1264;0.7254
+Ladder;0.1618;0.4522
+Hot Air Balloon;0.7588;0.1838
+Apple;0.8895;0.843
+Door Curtain;0.5546;0.4062
+Key;0.2796;0.9537
+Lollipop;0.8236;0.548
+Quill;0.5662;0.8135
+Flag Garland;0.2072;0.2665
+Plushy;0.688;0.5562
+Butterfly;0.8241;0.2781
+Broom;0.3372;0.4733
+Trumpet;0.4959;0.2927
+N;0.2941;0.2865
+Barrel;0.649;0.4878
+Headwear;0.3037;0.1997
+Flour;0.4775;0.5326
+Wanted Poster;0.5965;0.3375
+Flower Pot;0.7796;0.4594
+Corn;0.6006;0.5556
+Bell;0.4473;0.2255
+Target;0.2456;0.4121
+Chandelier;0.4682;0.3748
+Music Note;0.7406;0.8383
+Arrow Sign;0.2412;0.3346
+Rope;0.3853;0.5673
+Bird;0.3819;0.1216
+Crown;0.86;0.7703
+Weather Vane;0.6721;0.2456
+Cheese;0.749;0.502
+Boots;0.3145;0.5201
+Number Plate;0.3123;0.3599
+Ring;0.4039;0.7528
+Moon;0.3568;0.6158
+Hole;0.5592;0.2335
+Door Handle;0.2866;0.4479
+Star;0.5156;0.1714

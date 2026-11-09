@@ -1,0 +1,54 @@
+# Map 'Tavern' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Lantern;0.8546;0.8293
+Backpack;0.74;0.7334
+Pie;0.1037;0.7779
+Rope;0.6917;0.9167
+Moose Antlers;0.3533;0.3518
+Flame;0.7969;0.4492
+Lamb Chops;0.3078;0.7534
+Book;0.5877;0.773
+Basket;0.883;0.6191
+Broom;0.7858;0.5807
+Chest;0.3833;0.1707
+Jam;0.2298;0.7025
+Hole;0.7482;0.1343
+Maple Leaf;0.458;0.8513
+Bread;0.6582;0.6311
+Gold Coins;0.1258;0.7055
+Gloves;0.4825;0.6795
+Flower Pot;0.5684;0.5602
+Wood Pile;0.0423;0.5801
+Crown;0.861;0.6756
+Whisk;0.3834;0.673
+Wine Cask;0.5044;0.4618
+Y;0.1423;0.3114
+Turkey;0.4039;0.4233
+Heart;0.812;0.3573
+Spatula;0.6408;0.5562
+Scissors;0.7139;0.534
+Skillet;0.6025;0.4497
+Stain;0.9439;0.5387
+Bell;0.6599;0.5976
+Pouch;0.3915;0.5876
+Cheese;0.5437;0.6205
+Milk;0.2157;0.5507
+Tea Set;0.2771;0.5701
+Spoon;0.4128;0.5521
+Garlic;0.5657;0.374
+Brush;0.3025;0.614
+Fork;0.7685;0.6256
+Sausages;0.6439;0.371
+Fish Bone;0.888;0.5612
+Vase;0.9035;0.4854
+Bird;0.1656;0.4172
+Apple;0.3065;0.496
+Pumpkin;0.4455;0.5057
+Rolling Pin;0.7047;0.4928
+Tomatoes;0.4309;0.4769
+Corn;0.6223;0.4882
+Key;0.1429;0.5739
+Mouse;0.9675;0.4609
+Paw Print;0.4405;0.6341

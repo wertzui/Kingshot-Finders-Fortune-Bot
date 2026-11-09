@@ -1,0 +1,55 @@
+# Map 'Archery Range' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Scarecrow;0.0965;0.5021
+Chest;0.8823;0.8468
+Kite;0.9026;0.1088
+Crossbow;0.2256;0.8468
+Shield;0.0875;0.7339
+Megaphone;0.5647;0.2416
+Eagle Head;0.5649;0.3958
+Backpack;0.7391;0.7162
+Spyglass;0.5674;0.8892
+Crack;0.2371;0.6514
+Fork;0.3222;0.6192
+Sword;0.9084;0.7489
+Quiver;0.269;0.4972
+Iron Pot;0.165;0.4248
+Shovel;0.8684;0.596
+Canteen;0.4225;0.6776
+Stone Statue;0.089;0.3758
+Hedgehog;0.0565;0.9097
+Bucket;0.341;0.7983
+Rope;0.6715;0.278
+Magnifier;0.9167;0.9616
+Pliers;0.8628;0.6595
+Gold Coins;0.1888;0.74
+Windmill;0.0849;0.2056
+Compass;0.3888;0.8835
+Bird's Nest;0.6035;0.1179
+Bell;0.946;0.4468
+Stool;0.5739;0.5572
+Rose;0.0621;0.8513
+Mug;0.4317;0.7374
+Glass Bottle;0.0646;0.668
+Helmet;0.4659;0.5158
+Map;0.695;0.5876
+Tent;0.4327;0.3878
+Goggles;0.7767;0.1523
+Slingshot;0.2191;0.5696
+Animal Hide;0.4652;0.4507
+Glove;0.7532;0.4404
+Scissors;0.2648;0.7404
+Acorn;0.6288;0.8024
+Lantern;0.8464;0.3236
+Footprints;0.5938;0.7239
+Hot Air Balloon;0.3105;0.0587
+Boots;0.5495;0.4854
+Scroll;0.9012;0.5514
+Key;0.8472;0.4149
+Spoon;0.6124;0.6146
+M;0.6899;0.349
+Gecko;0.5693;0.1668
+Feather;0.7344;0.3909
+Patch;0.8095;0.275

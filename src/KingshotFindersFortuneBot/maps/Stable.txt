@@ -1,0 +1,54 @@
+# Map 'Stable' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Stool;0.111;0.8994
+Pipe;0.9393;0.2315
+Cart;0.5748;0.6055
+Ladder;0.1055;0.5863
+Barrel;0.0693;0.7309
+Chain;0.889;0.415
+Paint Bucket;0.1619;0.7978
+Pitchfork;0.4742;0.5373
+Goggles;0.7482;0.9271
+Kettle;0.2731;0.8263
+Medkit;0.2363;0.6936
+Broom;0.174;0.6315
+Horseshoe;0.4513;0.9541
+Pickaxe;0.5021;0.7064
+Chest;0.8235;0.7274
+Shield;0.2389;0.2805
+Pouch;0.8456;0.6549
+Horn;0.3434;0.7204
+Paper Bag;0.6311;0.7489
+Spring;0.9371;0.8677
+Backpack;0.5289;0.3444
+Triangle;0.4963;0.8777
+Plant;0.8685;0.5803
+Oil Puddle;0.2936;0.9212
+Hook;0.0637;0.3624
+Rope;0.4138;0.4014
+Clock;0.0933;0.2091
+Banner;0.4022;0.2161
+Blackboard;0.4294;0.2755
+Arrow Sign;0.6826;0.3769
+Scarf;0.402;0.5545
+Shovel;0.5503;0.5435
+Scissors;0.6762;0.262
+Mug;0.6172;0.8012
+Axe;0.3457;0.6314
+Bell;0.6825;0.7774
+Lock;0.2576;0.5327
+Medal;0.1481;0.404
+Spool;0.6762;0.6935
+Map;0.2191;0.4074
+Key;0.9553;0.4538
+Hammer;0.4333;0.6001
+Brush;0.7629;0.68
+Bird;0.6533;0.5058
+Cogwheel;0.5518;0.7583
+Mouse;0.7541;0.2042
+Tree;0.9641;0.2682
+Z;0.6826;0.8568
+Paw Mark;0.0318;0.5477
+Glass Bottle;0.7525;0.5313

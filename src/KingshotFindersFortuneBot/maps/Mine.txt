@@ -1,0 +1,54 @@
+# Map 'Mine' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Chain;0.788;0.9052
+Barrel;-0.0089;0.6411
+Pickaxe;0.3187;0.9037
+Kite;0.5049;0.0764
+Cart;0.5413;0.5307
+Sword;0.5224;0.6186
+Shovel;0.0955;0.8013
+Rug;0.4216;0.5746
+Ladder;0.1218;0.2725
+Apron;0.6322;0.2592
+Lamp;0.9487;0.5751
+Leather Bag;0.6354;0.6641
+Chest;0.7173;0.5692
+Boots;0.7957;0.6719
+Chimney;0.5013;0.2799
+Squirrel;0.9135;0.357
+Sign Post;0.7597;0.4682
+Pot Lid;0.1341;0.581
+Tower;0.7262;0.318
+Wrench;0.8258;0.8097
+Arrow Sign;0.1208;0.1921
+Carriage;0.7998;0.3354
+Branch;0.0857;0.0674
+Flame;0.2028;0.5163
+Cat;0.2763;0.2734
+Spider Web;0.5216;0.4638
+Notebook;0.2599;0.7679
+Glass Bottle;0.111;0.6695
+Iron Pot;0.9338;0.211
+Pliers;0.2027;0.569
+Megaphone;0.8503;0.2642
+Crystal;0.5176;0.7384
+Bird;0.83;0.1398
+Glove;0.2247;0.624
+Blueprint;0.3312;0.4159
+Scarecrow;0.7032;0.4332
+Hammer;0.8308;0.7314
+Parcel;0.6126;0.4398
+Broom;0.4325;0.3759
+Footprints;0.3538;0.698
+Key;0.8244;0.5736
+6;0.5773;0.8197
+Crown;0.3737;0.2112
+Bell;0.3091;0.4679
+Hanging Banner;0.1094;0.1548
+Mushroom;0.6861;0.5112
+Flower Pot;0.2772;0.1601
+Pouch;0.3009;0.3469
+Ladle;0.1094;0.5026
+A;0.1927;0.4407

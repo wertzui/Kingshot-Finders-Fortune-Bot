@@ -1,0 +1,54 @@
+# Map 'Infirmary' created from kingshotmastery.com. Lines starting with # are comments.
+# Margins (left top right bottom) of the board picture as fractions of the game area
+0.0844 0.0614 0.0808 0.173
+# Name;x;y as fractions of the board picture
+Curtain;0.6493;0.4186
+2;0.4617;0.1426
+Skylight;0.1087;0.1336
+Scissors;0.3189;0.8591
+Crutch;0.6843;0.7427
+Coat Rack;0.4137;0.45
+Lamp;0.8867;0.2697
+Flame;0.9203;0.5632
+Scalpel;0.2366;0.8223
+Mortar & Pestle;0.0671;0.7643
+Dagger;0.7154;0.1298
+Comb;0.5556;0.9488
+Bandage Roll;0.8024;0.9277
+Boat;0.0893;0.3306
+Boots;0.8979;0.8514
+Nun's Veil;0.2882;0.666
+Potion;0.3916;0.9058
+Broom;0.7455;0.5595
+Tweezers;0.4754;0.8295
+Necklace;0.5126;0.7634
+Moon;0.3382;0.3754
+Clock;0.2509;0.331
+First Aid Kit;0.4122;0.6814
+Injector;0.1618;0.7155
+Paper Bag;0.6188;0.7402
+Teddy Bear;0.923;0.6392
+Gift Box;0.8088;0.7697
+Bucket;0.5275;0.632
+Pliers;0.8176;0.6131
+Weighing Scale;0.0604;0.5266
+Duffle Bag;0.4855;0.5447
+Flower Pot;0.6115;0.5097
+Pitcher;0.8577;0.4987
+Water Stain;0.742;0.626
+Crown;0.5894;0.3049
+Button;0.1036;0.8903
+Mirror;0.0919;0.6764
+Calendar;0.8418;0.4234
+Hourglass;0.1289;0.4059
+Clipboard;0.2224;0.6121
+Socks;0.3475;0.5425
+Bird;0.5455;0.4798
+Bell;0.0635;0.4634
+Patch;0.8609;0.6965
+Magnifier;0.5288;0.5755
+Apple;0.5579;0.4209
+W;0.6308;0.6017
+Pouch;0.6803;0.5247
+Paper Ball;0.5697;0.675
+Three-Leaf Clover;0.1403;0.4648
