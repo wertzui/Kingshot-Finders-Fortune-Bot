@@ -9,13 +9,9 @@ using Windows.Media.Ocr;
 
 namespace KingshotFindersFortuneBot;
 
-/// <summary>Reads the item names from the 3x2 grid of buttons using the built-in Windows OCR.</summary>
+/// <summary>Reads the item names from a grid of buttons using the built-in Windows OCR.</summary>
 public sealed class ItemRecognizer
 {
-    public const int Columns = 3;
-    public const int Rows = 2;
-    public const int CellCount = Columns * Rows;
-
     private readonly OcrEngine _engine;
 
     public ItemRecognizer()
@@ -27,14 +23,14 @@ public sealed class ItemRecognizer
     }
 
     /// <summary>Returns the text of each grid cell (row by row, left to right); empty if a cell has no text.</summary>
-    public async Task<string[]> ReadItemsAsync(Bitmap image)
+    public async Task<string[]> ReadItemsAsync(Bitmap image, int columns, int rows)
     {
         var scaled = FitToEngine(image);
         try
         {
             using var software = ToSoftwareBitmap(scaled);
             var result = await _engine.RecognizeAsync(software);
-            return SplitIntoCells(result, software.PixelWidth, software.PixelHeight);
+            return SplitIntoCells(result, software.PixelWidth, software.PixelHeight, columns, rows);
         }
         finally
         {
@@ -43,9 +39,9 @@ public sealed class ItemRecognizer
         }
     }
 
-    private static string[] SplitIntoCells(OcrResult result, int width, int height)
+    private static string[] SplitIntoCells(OcrResult result, int width, int height, int columns, int rows)
     {
-        var cells = new List<(double X, double Y, double Height, string Text)>[CellCount];
+        var cells = new List<(double X, double Y, double Height, string Text)>[columns * rows];
         for (var i = 0; i < cells.Length; i++)
             cells[i] = [];
 
@@ -54,9 +50,9 @@ public sealed class ItemRecognizer
             var rect = word.BoundingRect;
             var centerX = rect.X + rect.Width / 2;
             var centerY = rect.Y + rect.Height / 2;
-            var column = Math.Clamp((int)(centerX / (width / (double)Columns)), 0, Columns - 1);
-            var row = Math.Clamp((int)(centerY / (height / (double)Rows)), 0, Rows - 1);
-            cells[row * Columns + column].Add((centerX, centerY, rect.Height, word.Text));
+            var column = Math.Clamp((int)(centerX / (width / (double)columns)), 0, columns - 1);
+            var row = Math.Clamp((int)(centerY / (height / (double)rows)), 0, rows - 1);
+            cells[row * columns + column].Add((centerX, centerY, rect.Height, word.Text));
         }
 
         return cells.Select(JoinInReadingOrder).ToArray();

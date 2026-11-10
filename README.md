@@ -1,7 +1,12 @@
 # 👑 Kingshot Finders Fortune Bot
 
-A Windows app that plays the **Finders Fortune** mini game of Kingshot for you.
-The game shows six item names at the bottom of the screen. The bot reads them with OCR, finds the matching item in the picture by using a map file, and clicks it. This repeats until all items are found.
+A Windows app that plays the **Finders Fusion** (multiplayer) and **Finders Fortune** (singleplayer) mini games of Kingshot for you.
+The game shows the names of the items to find at the bottom of the screen. The bot reads them with OCR, finds the matching item in the picture by using a map file, and clicks it. This repeats until all items are found.
+
+| Game mode | Item buttons |
+| --- | --- |
+| Finders Fusion (multiplayer) | 6, in 2 rows |
+| Finders Fortune (singleplayer) | 3, in 1 row. The timer above and the progress bar below the row are ignored. |
 
 ## Requirements
 
@@ -19,13 +24,14 @@ The release is self-contained, so no .NET installation is needed.
 
 ## Usage
 
-1. **Select map file.** Pick the map that is shown in the game. The maps in the `maps` folder are shown as a grid with their pictures. *Open another map file...* opens any other `.txt` map file.
-2. **Select game area.** Drag a rectangle over the whole game screen, from the top left corner to the bottom right corner. `Esc`, or a click without dragging, cancels. The bot scales all positions to this rectangle, so it works with any screen size and aspect ratio.
-3. Open the Finders Fortune screen in the game and press **Ctrl+Alt+K** to start. Press it again to pause.
+1. **Game mode.** Choose *Finders Fusion* or *Finders Fortune*. The modes have a different layout, so the right one is needed for reading the item names and for clicking at the right place. The same maps work for both modes.
+2. **Select map file.** Pick the map that is shown in the game. The maps in the `maps` folder are shown as a grid with their pictures. *Open another map file...* opens any other `.txt` map file.
+3. **Select game area.** Drag a rectangle over the whole game screen, from the top left corner to the bottom right corner. `Esc`, or a click without dragging, cancels. The bot scales all positions to this rectangle, so it works with any screen size and aspect ratio.
+4. Open the game screen and press **Ctrl+Alt+K** to start. Press it again to pause.
 
 While it runs:
 
-- The grid in the window shows the six items that were read. Known items are green, unknown ones red. The item that was just clicked flashes.
+- The grid in the window shows the items that were read. Known items are green, unknown ones red. The item that was just clicked flashes.
 - The log at the bottom shows every click and every item that is not in the map.
 - Names that OCR reads slightly wrong are still matched (fuzzy matching).
 - After 10 scans in a row without a known item, the bot pauses itself (for example at the end of a round).
@@ -43,14 +49,13 @@ The click position of every item is a point inside the real shape of the item, n
 
 ### Map file format
 
-Lines starting with `#` and empty lines are ignored.
+Lines starting with `#` and empty lines are ignored. Every other line is one item:
 
 ```text
-0.0844 0.0614 0.0808 0.173   # left top right bottom margin of the board picture, as fractions of the game area
-Key;0.7273;0.78              # name;x;y as fractions of the board picture
+Key;0.7273;0.78   # name;x;y as fractions of the board picture
 ```
 
-The margin line describes where the board picture sits inside the game screen. The item positions are fractions of the board picture, so a map is independent of the screen size.
+The positions are fractions of the board picture, so a map is independent of the screen size and of the game mode. Where the board picture sits on the screen is part of the game mode. Map files created with version 1.0.0 have an extra first line with four margins. It is ignored.
 
 ## Building
 

@@ -18,11 +18,14 @@ internal sealed class MainForm : Form
     private readonly PictureBox _mapPicture = new() { SizeMode = PictureBoxSizeMode.Zoom, Visible = false, Margin = new Padding(6, 0, 0, 0) };
     private readonly Label _areaLabel = CreateDescription("No game area selected. Drag a rectangle over the whole game. Esc or a click without dragging cancels.");
     private readonly Label _hotkeyLabel = CreateDescription("");
-    private readonly Label[] _cells = new Label[ItemRecognizer.CellCount];
-    private readonly Color[] _cellColors = new Color[ItemRecognizer.CellCount];
+    private readonly ComboBox _modeBox = new() { DropDownStyle = ComboBoxStyle.DropDownList, Dock = DockStyle.Fill, Margin = new Padding(3, 8, 3, 8) };
+    private readonly GroupBox _itemsBox = new() { Text = "Detected items", Dock = DockStyle.Fill };
+    private Label[] _cells = [];
+    private Color[] _cellColors = [];
     private readonly TextBox _log = new() { Dock = DockStyle.Fill, Multiline = true, ReadOnly = true, ScrollBars = ScrollBars.Vertical };
 
     private readonly ItemRecognizer? _recognizer;
+    private GameMode _mode = GameMode.Fusion;
     private GameMap? _map;
     private Rectangle? _gameArea;
     private CancellationTokenSource? _cts;
@@ -40,9 +43,15 @@ internal sealed class MainForm : Form
         root.RowStyles.Add(new RowStyle(SizeType.Absolute, 130));
         root.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
         root.Controls.Add(CreateSetupPanel(), 0, 0);
-        root.Controls.Add(CreateItemGrid(), 0, 1);
+        root.Controls.Add(_itemsBox, 0, 1);
         root.Controls.Add(CreateLogBox(), 0, 2);
         Controls.Add(root);
+
+        foreach (var mode in GameMode.All)
+            _modeBox.Items.Add(mode);
+        _modeBox.SelectedItem = _mode;
+        _modeBox.SelectedIndexChanged += (_, _) => SetMode((GameMode)_modeBox.SelectedItem!);
+        BuildItemGrid();
 
         _mapButton.Click += (_, _) => SelectMap();
         _areaButton.Click += (_, _) => SelectArea();
@@ -89,7 +98,7 @@ internal sealed class MainForm : Form
 
     private Control CreateSetupPanel()
     {
-        var panel = new TableLayoutPanel { Dock = DockStyle.Fill, AutoSize = true, ColumnCount = 2, RowCount = 4 };
+        var panel = new TableLayoutPanel { Dock = DockStyle.Fill, AutoSize = true, ColumnCount = 2, RowCount = 5 };
         panel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
         panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
 
@@ -102,31 +111,43 @@ internal sealed class MainForm : Form
             Font = new Font(Font, FontStyle.Bold),
         };
 
-        panel.Controls.Add(_mapButton, 0, 0);
-        panel.Controls.Add(CreateMapInfo(), 1, 0);
-        panel.Controls.Add(_areaButton, 0, 1);
-        panel.Controls.Add(_areaLabel, 1, 1);
-        panel.Controls.Add(hotkey, 0, 2);
-        panel.Controls.Add(_hotkeyLabel, 1, 2);
-        panel.Controls.Add(_createMapButton, 0, 3);
-        panel.Controls.Add(CreateDescription("No map file yet? Create one from the website kingshotmastery.com."), 1, 3);
+        panel.Controls.Add(new Label { Text = "Game mode", Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleCenter }, 0, 0);
+        panel.Controls.Add(_modeBox, 1, 0);
+        panel.Controls.Add(_mapButton, 0, 1);
+        panel.Controls.Add(CreateMapInfo(), 1, 1);
+        panel.Controls.Add(_areaButton, 0, 2);
+        panel.Controls.Add(_areaLabel, 1, 2);
+        panel.Controls.Add(hotkey, 0, 3);
+        panel.Controls.Add(_hotkeyLabel, 1, 3);
+        panel.Controls.Add(_createMapButton, 0, 4);
+        panel.Controls.Add(CreateDescription("No map file yet? Create one from the website kingshotmastery.com."), 1, 4);
         return panel;
     }
 
-    private Control CreateItemGrid()
+    private void SetMode(GameMode mode)
     {
-        var box = new GroupBox { Text = "Detected items", Dock = DockStyle.Fill };
+        _mode = mode;
+        BuildItemGrid();
+        Log($"Game mode: {mode.Name}.");
+    }
+
+    // The grid has one cell per item button of the selected game mode.
+    private void BuildItemGrid()
+    {
+        _itemsBox.Controls.Clear();
         var grid = new TableLayoutPanel
         {
             Dock = DockStyle.Fill,
-            ColumnCount = ItemRecognizer.Columns,
-            RowCount = ItemRecognizer.Rows,
+            ColumnCount = _mode.Columns,
+            RowCount = _mode.Rows,
         };
-        for (var c = 0; c < ItemRecognizer.Columns; c++)
-            grid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f / ItemRecognizer.Columns));
-        for (var r = 0; r < ItemRecognizer.Rows; r++)
-            grid.RowStyles.Add(new RowStyle(SizeType.Percent, 100f / ItemRecognizer.Rows));
+        for (var c = 0; c < _mode.Columns; c++)
+            grid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f / _mode.Columns));
+        for (var r = 0; r < _mode.Rows; r++)
+            grid.RowStyles.Add(new RowStyle(SizeType.Percent, 100f / _mode.Rows));
 
+        _cells = new Label[_mode.CellCount];
+        _cellColors = new Color[_mode.CellCount];
         for (var i = 0; i < _cells.Length; i++)
         {
             _cellColors[i] = EmptyColor;
@@ -139,13 +160,11 @@ internal sealed class MainForm : Form
                 BackColor = EmptyColor,
                 Font = new Font(Font.FontFamily, 11, FontStyle.Bold),
             };
-            grid.Controls.Add(_cells[i], i % ItemRecognizer.Columns, i / ItemRecognizer.Columns);
+            grid.Controls.Add(_cells[i], i % _mode.Columns, i / _mode.Columns);
         }
 
-        box.Controls.Add(grid);
-        return box;
+        _itemsBox.Controls.Add(grid);
     }
-
     private Control CreateLogBox()
     {
         var box = new GroupBox { Text = "Log", Dock = DockStyle.Fill };
@@ -242,7 +261,7 @@ internal sealed class MainForm : Form
             return;
         }
 
-        var bot = new Bot(_map, area, _recognizer);
+        var bot = new Bot(_map, _mode, area, _recognizer);
         bot.Log += Log;
         bot.ItemsDetected += items => BeginInvoke(() => ShowItems(items));
         bot.ItemClicked += cell => BeginInvoke(() => Flash(cell));
@@ -281,6 +300,7 @@ internal sealed class MainForm : Form
         _mapButton.Enabled = !running;
         _createMapButton.Enabled = !running;
         _areaButton.Enabled = !running;
+        _modeBox.Enabled = !running;
         UpdateHotkeyLabel(running);
     }
 

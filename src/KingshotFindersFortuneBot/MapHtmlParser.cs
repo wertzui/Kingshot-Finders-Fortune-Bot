@@ -9,14 +9,6 @@ namespace KingshotFindersFortuneBot;
 /// <summary>Converts the board HTML of kingshotmastery.com into the map file format.</summary>
 public static class MapHtmlParser
 {
-    // Margins around the board picture, measured on the reference screenshot (1138 x 2035 pixels).
-    // They are stored as fractions of the game area, so they scale with any screen size and aspect ratio.
-    private const double MarginLeft = 96.0 / 1138;
-    private const double MarginTop = 125.0 / 2035;
-    private const double MarginRight = (1138.0 - 1046) / 1138;
-    private const double MarginBottom = (2035.0 - 1683) / 2035;
-
-    /// <param name="ImageUrl">The (possibly relative) URL of the board background image, or null if there is none.</param>
     public sealed record ParsedMap(string Name, string FileContent, string? ImageUrl);
 
     public static ParsedMap Parse(string html)
@@ -51,8 +43,6 @@ public static class MapHtmlParser
         var mapName = GetMapName(board);
         var text = new StringBuilder();
         text.AppendLine($"# Map '{mapName}' created from kingshotmastery.com. Lines starting with # are comments.");
-        text.AppendLine("# Margins (left top right bottom) of the board picture as fractions of the game area");
-        text.AppendLine(string.Join(" ", new[] { MarginLeft, MarginTop, MarginRight, MarginBottom }.Select(Format)));
         text.AppendLine("# Name;x;y as fractions of the board picture");
         foreach (var (name, x, y) in items)
             text.AppendLine($"{name.Replace(';', ',')};{Format(x)};{Format(y)}");
