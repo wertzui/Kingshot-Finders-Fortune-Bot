@@ -6,11 +6,9 @@ namespace KingshotFindersFortuneBot;
 public sealed record DetectedItem(string Text, MapEntry? Entry);
 
 /// <summary>The main loop: screenshot the item names, OCR them and click the mapped positions.</summary>
-public sealed class Bot(GameMap map, GameMode mode, Rectangle gameArea, ItemRecognizer recognizer)
+public sealed class Bot(GameMap map, GameMode mode, Rectangle gameArea, ItemRecognizer recognizer, BotSettings settings)
 {
-    private static readonly TimeSpan ClickDelay = TimeSpan.FromMilliseconds(200);
     private static readonly TimeSpan IdleScanDelay = TimeSpan.FromMilliseconds(100);
-    private const int MaxEmptyScans = 10;
 
     // Only the row(s) with the item names are captured, which also keeps OCR fast.
     private readonly Rectangle _ocrRegion = mode.GetOcrRegion(gameArea);
@@ -26,10 +24,12 @@ public sealed class Bot(GameMap map, GameMode mode, Rectangle gameArea, ItemReco
     {
         var unknown = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         var emptyScans = 0;
+        var cooldown = new ClickCooldown(settings.ItemCooldown);
 
         while (!cancellationToken.IsCancellationRequested)
         {
             string[] texts;
+            var capturedAt = cooldown.GetTimestamp();
             using (var screenshot = ScreenCapture.Capture(_ocrRegion))
                 texts = await recognizer.ReadItemsAsync(screenshot, mode.Columns, mode.Rows);
 
@@ -37,6 +37,7 @@ public sealed class Bot(GameMap map, GameMode mode, Rectangle gameArea, ItemReco
             ItemsDetected?.Invoke(items);
 
             var clicked = 0;
+            var coolingDown = 0;
             for (var cell = 0; cell < items.Length; cell++)
             {
                 cancellationToken.ThrowIfCancellationRequested();
@@ -51,11 +52,19 @@ public sealed class Bot(GameMap map, GameMode mode, Rectangle gameArea, ItemReco
                     continue;
                 }
 
+                // The item was clicked a moment ago and is still visible, because the game plays an animation.
+                if (cooldown.IsCoolingDown(entry.Name, capturedAt))
+                {
+                    coolingDown++;
+                    continue;
+                }
+
                 NativeMethods.Click(mode.ToScreen(entry, gameArea));
+                cooldown.MarkClicked(entry.Name);
                 ItemClicked?.Invoke(cell);
                 Log?.Invoke($"Clicked '{entry.Name}'" + (entry.Name.Equals(item.Text, StringComparison.OrdinalIgnoreCase) ? "" : $" (read as '{item.Text}')"));
                 clicked++;
-                await Task.Delay(ClickDelay, cancellationToken);
+                await Task.Delay(settings.ClickDelay, cancellationToken);
             }
 
             if (clicked > 0)
@@ -64,9 +73,16 @@ public sealed class Bot(GameMap map, GameMode mode, Rectangle gameArea, ItemReco
                 continue;
             }
 
-            if (++emptyScans >= MaxEmptyScans)
+            // Waiting for an animation to end is no failed scan.
+            if (coolingDown > 0)
             {
-                Log?.Invoke($"No known items found in {MaxEmptyScans} scans. Paused.");
+                emptyScans = 0;
+                await Task.Delay(IdleScanDelay, cancellationToken);
+                continue;
+            }
+            if (settings.MaxEmptyScans is { } maxEmptyScans && ++emptyScans >= maxEmptyScans)
+            {
+                Log?.Invoke($"No known items found in {maxEmptyScans} scans. Paused.");
                 return;
             }
 

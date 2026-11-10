@@ -27,15 +27,26 @@ The release is self-contained, so no .NET installation is needed.
 1. **Game mode.** Choose *Finders Fusion* or *Finders Fortune*. The modes have a different layout, so the right one is needed for reading the item names and for clicking at the right place. The same maps work for both modes.
 2. **Select map file.** Pick the map that is shown in the game. The maps in the `maps` folder are shown as a grid with their pictures. *Open another map file...* opens any other `.txt` map file.
 3. **Select game area.** Drag a rectangle over the whole game screen, from the top left corner to the bottom right corner. `Esc`, or a click without dragging, cancels. The bot scales all positions to this rectangle, so it works with any screen size and aspect ratio.
-4. Open the game screen and press **Ctrl+Alt+K** to start. Press it again to pause.
+4. Optionally change the **Settings** (see below).
+5. Open the game screen and press **Ctrl+Alt+K** to start. Press it again to pause.
 
 While it runs:
 
 - The grid in the window shows the items that were read. Known items are green, unknown ones red. The item that was just clicked flashes.
 - The log at the bottom shows every click and every item that is not in the map.
 - Names that OCR reads slightly wrong are still matched (fuzzy matching).
-- After 10 scans in a row without a known item, the bot pauses itself (for example at the end of a round).
+- An item that was just clicked is ignored for a short time (see *Ignore clicked item* in the settings), so the bot does not click it a second time while its name is still shown.
 
+### Settings
+
+| Setting | Default | Meaning |
+| --- | --- | --- |
+| Delay after each click (ms) | 200 | The wait after each click. Increase it if the game is too slow to remove the clicked item. |
+| Ignore clicked item (ms) | 500 | After a click, the game plays an animation in which the item name is still visible. The bot does not click the same item again during this time. Set it to the length of the animation. |
+| Stop after failed scans | 10 | The bot pauses itself after this many scans in a row without a known item (for example at the end of a round). |
+| Never stop | off | The bot keeps scanning until you pause it with the hotkey, no matter how many scans find nothing. |
+
+The settings cannot be changed while the bot is running.
 ## Creating a map
 
 The `maps` folder contains maps for the existing boards. For a new or changed board, use **Create Map**. The positions come from [kingshotmastery.com](https://kingshotmastery.com/tools/finders-fortune).

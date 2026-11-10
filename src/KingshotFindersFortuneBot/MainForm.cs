@@ -19,6 +19,10 @@ internal sealed class MainForm : Form
     private readonly Label _areaLabel = CreateDescription("No game area selected. Drag a rectangle over the whole game. Esc or a click without dragging cancels.");
     private readonly Label _hotkeyLabel = CreateDescription("");
     private readonly ComboBox _modeBox = new() { DropDownStyle = ComboBoxStyle.DropDownList, Dock = DockStyle.Fill, Margin = new Padding(3, 8, 3, 8) };
+    private readonly NumericUpDown _delayBox = new() { Minimum = 0, Maximum = 10000, Increment = 50, Value = 100, Width = 70, Anchor = AnchorStyles.Left };
+    private readonly NumericUpDown _cooldownBox = new() { Minimum = 0, Maximum = 10000, Increment = 50, Value = 1000, Width = 70, Anchor = AnchorStyles.Left };
+    private readonly NumericUpDown _maxFailuresBox = new() { Minimum = 1, Maximum = 1000, Value = 10, Width = 70, Anchor = AnchorStyles.Left };
+    private readonly CheckBox _neverStopBox = new() { Text = "Never stop", AutoSize = true, Anchor = AnchorStyles.Left };
     private readonly GroupBox _itemsBox = new() { Text = "Detected items", Dock = DockStyle.Fill };
     private Label[] _cells = [];
     private Color[] _cellColors = [];
@@ -34,7 +38,7 @@ internal sealed class MainForm : Form
     {
         Text = $"Kingshot Finders Fortune Bot {AppIcon.Version}";
         Icon = AppIcon.Instance;
-        ClientSize = new Size(1120, 600);
+        ClientSize = new Size(1300, 1000);
         MinimumSize = new Size(480, 500);
         StartPosition = FormStartPosition.CenterScreen;
 
@@ -98,7 +102,7 @@ internal sealed class MainForm : Form
 
     private Control CreateSetupPanel()
     {
-        var panel = new TableLayoutPanel { Dock = DockStyle.Fill, AutoSize = true, ColumnCount = 2, RowCount = 5 };
+        var panel = new TableLayoutPanel { Dock = DockStyle.Fill, AutoSize = true, ColumnCount = 2, RowCount = 6 };
         panel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
         panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
 
@@ -121,6 +125,8 @@ internal sealed class MainForm : Form
         panel.Controls.Add(_hotkeyLabel, 1, 3);
         panel.Controls.Add(_createMapButton, 0, 4);
         panel.Controls.Add(CreateDescription("No map file yet? Create one from the website kingshotmastery.com."), 1, 4);
+        panel.Controls.Add(new Label { Text = "Settings", Dock = DockStyle.Fill, TextAlign = ContentAlignment.TopCenter, Padding = new Padding(0, 6, 0, 0) }, 0, 5);
+        panel.Controls.Add(CreateSettingsPanel(), 1, 5);
         return panel;
     }
 
@@ -165,6 +171,32 @@ internal sealed class MainForm : Form
 
         _itemsBox.Controls.Add(grid);
     }
+    private Control CreateSettingsPanel()
+    {
+        var tip = new ToolTip();
+        tip.SetToolTip(_delayBox, "The wait after each click, in milliseconds.");
+        tip.SetToolTip(_cooldownBox, "How long an item is ignored after it was clicked, in milliseconds. It should be as long as the animation of the game, in which the item name is still visible.");
+        tip.SetToolTip(_maxFailuresBox, "The bot pauses itself after this many scans in a row without a known item.");
+        tip.SetToolTip(_neverStopBox, "The bot keeps scanning until you pause it with the hotkey, no matter how many scans find nothing.");
+
+        var panel = new FlowLayoutPanel { Dock = DockStyle.Fill, AutoSize = true, WrapContents = true, Margin = Padding.Empty };
+        var labelPadding = new Padding(0, 6, 0, 0);
+        panel.Controls.Add(new Label { Text = "Delay after each click (ms)", AutoSize = true, Margin = labelPadding });
+        panel.Controls.Add(_delayBox);
+        panel.Controls.Add(new Label { Text = "Ignore clicked item (ms)", AutoSize = true, Margin = new Padding(16, 6, 0, 0) });
+        panel.Controls.Add(_cooldownBox);
+        panel.Controls.Add(new Label { Text = "Stop after failed scans", AutoSize = true, Margin = new Padding(16, 6, 0, 0) });
+        panel.Controls.Add(_maxFailuresBox);
+        panel.Controls.Add(_neverStopBox);
+
+        _neverStopBox.CheckedChanged += (_, _) => _maxFailuresBox.Enabled = !_neverStopBox.Checked;
+        return panel;
+    }
+
+    private BotSettings GetSettings() => new(
+        TimeSpan.FromMilliseconds((double)_delayBox.Value),
+        _neverStopBox.Checked ? null : (int)_maxFailuresBox.Value,
+        TimeSpan.FromMilliseconds((double)_cooldownBox.Value));
     private Control CreateLogBox()
     {
         var box = new GroupBox { Text = "Log", Dock = DockStyle.Fill };
@@ -261,7 +293,7 @@ internal sealed class MainForm : Form
             return;
         }
 
-        var bot = new Bot(_map, _mode, area, _recognizer);
+        var bot = new Bot(_map, _mode, area, _recognizer, GetSettings());
         bot.Log += Log;
         bot.ItemsDetected += items => BeginInvoke(() => ShowItems(items));
         bot.ItemClicked += cell => BeginInvoke(() => Flash(cell));
@@ -301,6 +333,10 @@ internal sealed class MainForm : Form
         _createMapButton.Enabled = !running;
         _areaButton.Enabled = !running;
         _modeBox.Enabled = !running;
+        _delayBox.Enabled = !running;
+        _cooldownBox.Enabled = !running;
+        _neverStopBox.Enabled = !running;
+        _maxFailuresBox.Enabled = !running && !_neverStopBox.Checked;
         UpdateHotkeyLabel(running);
     }
 
